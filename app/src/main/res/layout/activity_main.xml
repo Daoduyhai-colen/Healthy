@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HEALTH TRACKER"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="#2196F3"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvGoalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mục tiêu: 2000ml nước | 500kcal vận động"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="#757575"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:text="Hồ sơ sức khỏe" 
+                android:textStyle="bold"
+                android:textColor="#2196F3"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/etAge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:hint="Tuổi"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/btnUpdateGoal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="Cập nhật Goal"
+                    android:textSize="12sp"
+                    android:backgroundTint="#2196F3"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_water" />
+
+            <TextView
+                android:id="@+id/tvWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nước: 0 / 2000 ml"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+            <ProgressBar
+                android:id="@+id/pbWater"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginVertical="10dp"
+                android:max="2000" />
+
+            <Button
+                android:id="@+id/btnAddWater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Uống 250ml" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chỉ số cơ thể" android:textStyle="bold"/>
+            
+            <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cân nặng (kg)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Chiều cao (cm)"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/btnBmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tính BMI" />
+
+            <TextView
+                android:id="@+id/tvBmiResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kết quả: --"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔥 TỔNG TIÊU THỤ: 0 kcal\n\nHôm nay chưa vận động"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:textStyle="italic"
+            android:textColor="#757575"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnGoToVandong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nhật ký vận động"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#4CAF50"/>
+
+        <Button
+            android:id="@+id/btnReset"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xóa dữ liệu ngày hôm nay"
+            android:layout_gravity="center"
+            android:textColor="#F44336" />
+
+    </LinearLayout>
+</ScrollView>

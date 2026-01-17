@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_vandong"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NHẬT KÝ VẬN ĐỘNG"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tổng Phút" android:textSize="12sp"/>
+                <TextView android:id="@+id/tvTotalMins" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="#4CAF50"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tổng Kcal" android:textSize="12sp"/>
+                <TextView android:id="@+id/tvTotalBurned" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="#F44336"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Số môn" android:textSize="12sp"/>
+                <TextView android:id="@+id/tvTotalItems" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="#2196F3"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chọn hoạt động:" android:textStyle="bold"/>
+            <Spinner android:id="@+id/spActivities" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="8dp"/>
+
+            <TextView android:id="@+id/tvDurationDisplay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thời gian: 30 phút" android:textColor="#2196F3" android:textStyle="bold" android:layout_marginTop="24dp"/>
+            <SeekBar android:id="@+id/sbDuration" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
+
+            <Button android:id="@+id/btnSaveActivity" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="LƯU HOẠT ĐỘNG" android:layout_marginTop="30dp" android:backgroundTint="#4CAF50" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💡 Trạng thái hôm nay"
+                android:textStyle="bold"
+                android:textColor="#FF9800"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvEffortStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hãy bắt đầu tập luyện nhé!"
+                android:textSize="14sp"
+                android:textColor="#2E7D32"
+                android:textStyle="italic"
+                android:layout_marginBottom="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvHealthTip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mẹo: Uống nước trước khi tập giúp tăng hiệu suất."
+                android:textSize="12sp"
+                android:textColor="#757575"/>
+        </LinearLayout>
+
+        <Button android:id="@+id/btnBack" style="@style/Widget.AppCompat.Button.Borderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quay lại" android:textColor="#F44336" android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
